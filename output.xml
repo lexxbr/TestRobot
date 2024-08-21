@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.11.9 on win32)" generated="2024-08-21T11:37:06.756614" rpa="false" schemaversion="5">
+<suite id="s1" name="BlogTest" source="C:\Meus Docs\Documents\001 - ALEXANDRE F\01 - ESTUDOS\AUTOMAÇÃO DE TESTES QA\Teste do teste\Blog\BlogTest.robot">
+<test id="s1-t1" name="Caso de Teste 01: Pesquisar um post" line="8">
+<kw name="Acessar a pagina do blog" owner="ResourceBlogTest" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-21T11:37:07.107787" level="INFO">Opening browser 'edge' to base url 'https://robotizandotestes.blogspot.com/'.</msg>
+<arg>url=${URL}</arg>
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-21T11:37:07.107787" elapsed="6.695096"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-21T11:37:13.813996" level="INFO">Page title is 'Robotizando Testes'.</msg>
+<arg>Robotizando Testes</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-08-21T11:37:13.803883" elapsed="0.010113"/>
+</kw>
+<status status="PASS" start="2024-08-21T11:37:07.106784" elapsed="6.707212"/>
+</kw>
+<kw name="Pesquisar por um post com &quot;Season WEB Testing - Ep. 03: Open Browser - Chrome Options&quot;" owner="ResourceBlogTest" source_name="Pesquisar por um post com &quot;${TEXTO_PESQUISA}&quot;">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${BTN_PESQUISAR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-21T11:37:13.814995" elapsed="0.028294"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-08-21T11:37:13.844305" level="INFO">Clicking button 'css=button.search-expand.touch-icon-button'.</msg>
+<arg>${BTN_PESQUISAR}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-21T11:37:13.844305" elapsed="0.089171"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-21T11:37:13.937470" level="INFO">Typing text 'Season WEB Testing - Ep. 03: Open Browser - Chrome Options' into text field 'name=q'.</msg>
+<arg>${INPUT_PESQUISA}</arg>
+<arg>${TEXTO_PESQUISA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-21T11:37:13.936470" elapsed="0.628928"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-21T11:37:14.566408" level="INFO">Clicking element 'css=input.search-action.flat-button'.</msg>
+<arg>${SUBMIT_PESQUISA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-21T11:37:14.565398" elapsed="1.331808"/>
+</kw>
+<status status="PASS" start="2024-08-21T11:37:13.814995" elapsed="2.082211"/>
+</kw>
+<kw name="Conferir Mensagem de pesquisa por &quot;Mostrando postagens que correspondem à pesquisa por Season WEB Testing - Ep. 03: Open Browser - Chrome Options&quot;" owner="ResourceBlogTest" source_name="Conferir Mensagem de pesquisa por &quot;${MSG_DESEJADA}&quot;">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-08-21T11:37:15.922646" level="INFO">Current page contains text 'Mostrando postagens que correspondem à pesquisa por Season WEB Testing - Ep. 03: Open Browser - Chrome Options'.</msg>
+<arg>text=${MSG_DESEJADA}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-08-21T11:37:15.899203" elapsed="0.023443"/>
+</kw>
+<status status="PASS" start="2024-08-21T11:37:15.898205" elapsed="0.024441"/>
+</kw>
+<kw name="Fechar Navegador" owner="ResourceBlogTest" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-08-21T11:37:15.923647" elapsed="2.474490"/>
+</kw>
+<status status="PASS" start="2024-08-21T11:37:15.923647" elapsed="2.474490"/>
+</kw>
+<status status="PASS" start="2024-08-21T11:37:07.105787" elapsed="11.294274"/>
+</test>
+<test id="s1-t2" name="Caso de teste 02: Ler post" line="12">
+<kw name="Acessar a pagina do blog" owner="ResourceBlogTest" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-21T11:37:18.410932" level="INFO">Opening browser 'edge' to base url 'https://robotizandotestes.blogspot.com/'.</msg>
+<arg>url=${URL}</arg>
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-21T11:37:18.409935" elapsed="5.472237"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-21T11:37:23.892171" level="INFO">Page title is 'Robotizando Testes'.</msg>
+<arg>Robotizando Testes</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-08-21T11:37:23.883171" elapsed="0.010000"/>
+</kw>
+<status status="PASS" start="2024-08-21T11:37:18.408934" elapsed="5.484237"/>
+</kw>
+<kw name="Acessar o post &quot;Season WEB Testing - Ep. 03: Open Browser - Chrome Options&quot;" owner="ResourceBlogTest" source_name="Acessar o post &quot;${TEXTO_PESQUISA}&quot;">
+<kw name="Pesquisar por um post com &quot;${TEXTO_PESQUISA}&quot;" owner="ResourceBlogTest" source_name="Pesquisar por um post com &quot;${TEXTO_PESQUISA}&quot;">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${BTN_PESQUISAR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-21T11:37:23.895203" elapsed="0.029700"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-08-21T11:37:23.924903" level="INFO">Clicking button 'css=button.search-expand.touch-icon-button'.</msg>
+<arg>${BTN_PESQUISAR}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-21T11:37:23.924903" elapsed="0.097111"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-21T11:37:24.023013" level="INFO">Typing text 'Season WEB Testing - Ep. 03: Open Browser - Chrome Options' into text field 'name=q'.</msg>
+<arg>${INPUT_PESQUISA}</arg>
+<arg>${TEXTO_PESQUISA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-21T11:37:24.022014" elapsed="0.642075"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-21T11:37:24.667274" level="INFO">Clicking element 'css=input.search-action.flat-button'.</msg>
+<arg>${SUBMIT_PESQUISA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-21T11:37:24.667274" elapsed="1.305406"/>
+</kw>
+<status status="PASS" start="2024-08-21T11:37:23.895203" elapsed="2.077477"/>
+</kw>
+<status status="PASS" start="2024-08-21T11:37:23.894174" elapsed="2.078506"/>
+</kw>
+<kw name="Conferir se a imagem do Robo aparece" owner="ResourceBlogTest">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${LINK_POST}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-21T11:37:25.974674" elapsed="0.030737"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-21T11:37:26.006408" level="INFO">Clicking element 'xpath=//a[contains(.,'Season WEB Testing - Ep. 03: Open Browser - Chrome Options')]'.</msg>
+<arg>${LINK_POST}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-21T11:37:26.006408" elapsed="3.091723"/>
+</kw>
+<kw name="Page Should Contain Image" owner="SeleniumLibrary">
+<msg time="2024-08-21T11:37:29.133129" level="INFO">Current page contains image 'xpath=//img[contains(@data-original-width,'512')]'.</msg>
+<arg>${IMG_ROBO}</arg>
+<doc>Verifies image identified by ``locator`` is found from current page.</doc>
+<status status="PASS" start="2024-08-21T11:37:29.098131" elapsed="0.034998"/>
+</kw>
+<status status="PASS" start="2024-08-21T11:37:25.973674" elapsed="3.159455"/>
+</kw>
+<kw name="Conferir se o texto &quot;Oláááááá Robotizadores!! Fazia um tempinho que eu não postava aqui&quot; aparece" owner="ResourceBlogTest" source_name="Conferir se o texto &quot;${TEXTO_DESEJADO}&quot; aparece">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-08-21T11:37:29.159388" level="INFO">Current page contains text 'Oláááááá Robotizadores!! Fazia um tempinho que eu não postava aqui'.</msg>
+<arg>text=${TEXTO_DESEJADO}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-08-21T11:37:29.134133" elapsed="0.025255"/>
+</kw>
+<status status="PASS" start="2024-08-21T11:37:29.133129" elapsed="0.027264"/>
+</kw>
+<kw name="Fechar Navegador" owner="ResourceBlogTest" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-08-21T11:37:29.161389" elapsed="2.394893"/>
+</kw>
+<status status="PASS" start="2024-08-21T11:37:29.160393" elapsed="2.395889"/>
+</kw>
+<status status="PASS" start="2024-08-21T11:37:18.405620" elapsed="13.152873"/>
+</test>
+<status status="PASS" start="2024-08-21T11:37:06.759615" elapsed="24.805800"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="BlogTest">BlogTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
